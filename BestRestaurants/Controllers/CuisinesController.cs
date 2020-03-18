@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BestRestaurants.Controllers
 {
-  public class CategoriesController : Controller
+  public class CuisinesController : Controller
   {
     private readonly BestRestaurantsContext _db;
 
-    public CategoriesController(BestRestaurantsContext db)
+    public CuisinesController(BestRestaurantsContext db)
     {
       _db = db;
     }
