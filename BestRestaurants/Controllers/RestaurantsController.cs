@@ -36,11 +36,11 @@ namespace BestRestaurants.Controllers
       return RedirectToAction("Index");
     }
 
-    // public ActionResult Details(int id)
-    // {
-    //   Item thisItem = _db.Items.FirstOrDefault(items => items.ItemId == id);
-    //   return View(thisItem);
-    // }
+    public ActionResult Details(int id)
+    {
+      Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurants => restaurants.RestaurantId == id);
+      return View(thisRestaurant);
+    }
 
     // public ActionResult Edit(int id)
     // {
