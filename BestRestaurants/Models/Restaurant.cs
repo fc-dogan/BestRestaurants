@@ -10,5 +10,11 @@ namespace BestRestaurants.Models
     public string Description { get; set; }
     public int CuisineId { get; set; }
     public virtual Cuisine Cuisine { get; set; }
+    public virtual ICollection<Review> Reviews { get; set; }
+
+    public Restaurant()
+    {
+      this.Reviews = new HashSet<Review>();
+    }
   }
 }
