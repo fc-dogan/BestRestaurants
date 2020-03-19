@@ -15,6 +15,14 @@ namespace BestRestaurants.Controllers
     {
       _db = db;
     }
+
+    public ActionResult Index()
+    {
+      List<Review> model = _db.Reviews.Include(reviews => reviews.Restaurant).ToList();
+      return View(model);
+    }
+
+
   }
 
 
