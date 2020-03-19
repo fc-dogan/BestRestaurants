@@ -22,6 +22,20 @@ namespace BestRestaurants.Controllers
       return View(model);
     }
 
+    public ActionResult Create()
+    {
+      ViewBag.RestaurantId = new SelectList(_db.Restaurants, "RestaurantId", "Title");
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Review review)
+    {
+      _db.Reviews.Add(review);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
 
   }
 
