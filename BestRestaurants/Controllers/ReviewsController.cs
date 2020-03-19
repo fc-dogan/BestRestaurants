@@ -24,7 +24,7 @@ namespace BestRestaurants.Controllers
 
     public ActionResult Create()
     {
-      ViewBag.RestaurantId = new SelectList(_db.Restaurants, "RestaurantId", "Title");
+      ViewBag.RestaurantId = new SelectList(_db.Restaurants, "RestaurantId", "Name"); //this needs to be restaurant name, not review information
       return View();
     }
 
